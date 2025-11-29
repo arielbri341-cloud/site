@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bri Ariel Tsikenu - Développeur Web Fullstack</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+    }
+    .navbar { background-color: rgba(0,0,0,0.6); }
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+    }
+    .hero h1 { font-size: 3rem; text-shadow: 0 0 15px #00f7ff; }
+    .hero p { font-size: 1.2rem; margin-top: 1rem; }
+    .hero img {
+      width: 180px; height: 180px;
+      object-fit: cover; border-radius: 50%;
+      border: 4px solid #00f7ff; box-shadow: 0 0 20px #00f7ff;
+      margin-bottom: 20px;
+    }
+    .glow { text-shadow: 0 0 10px #00e0ff, 0 0 20px #00e0ff; }
+    .skills div { margin: 20px; }
+    .skills i, .skills img {
+      font-size: 3rem; margin-bottom: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: block; border-radius: 10px; padding: 10px;
+    }
+    .skills i:hover, .skills img:hover {
+      transform: scale(1.2);
+      box-shadow: 0 0 20px #00e0ff, 0 0 40px #00e0ff;
+    }
+    .card {
+      background: rgba(255,255,255,0.1);
+      border: none; border-radius: 15px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 20px #00e0ff, 0 0 40px #00e0ff;
+    }
+    .card-text {
+      background: rgba(0,0,0,0.6);
+      padding: 10px;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 0.95rem;
+      margin-top: 10px;
+    }
+    footer { background-color: rgba(0,0,0,0.7); padding: 20px; text-align: center; }
+    .contact-form input, .contact-form textarea { margin-bottom: 15px; }
+    .whatsapp-btn {
+      background-color: #25D366; color: white;
+      border-radius: 50px; padding: 12px 25px;
+      font-size: 1.1rem; text-decoration: none;
+      display: inline-flex; align-items: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .whatsapp-btn i { margin-right: 10px; }
+    .whatsapp-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #25D366, 0 0 40px #25D366;
+    }
+    .whatsapp-float {
+      position: fixed; bottom: 20px; right: 20px; z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" data-aos="fade-down">
+    <div class="container">
+      <a class="navbar-brand glow" href="#">Bri Ariel Tsikenu</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" data-aos="fade-up">
+    <img src="IMAGE/MOI.jpg" alt="Portrait de Bri Ariel Tsikenu, développeur web fullstack">
+    <h1 class="glow">Salut, je suis Bri Ariel Tsikenu</h1>
+    <p>Développeur Web & Designer</p>
+    <a href="#projects" class="btn btn-info mt-3">Voir mes projets</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="container py-5 text-center" data-aos="fade-up">
+    <h2 class="text-center glow mb-4">À propos</h2>
+    <p>Je suis Bri Ariel Tsikenu, passionné par le développement web fullstack. J’aime créer des solutions modernes, dynamiques et lumineuses qui marquent les esprits.</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="container py-5" data-aos="fade-up">
+    <h2 class="text-center glow mb-4">Mes Projets</h2>
+    <div class="row g-4">
+      <!-- Projet 1 -->
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="card p-3">
+          <img src="IMAGE/HOPITAL.png" class="card-img-top rounded" alt="Gestion de rendez-vous pour hôpital">
+          <div class="card-body">
+            <h5 class="card-title">Projet 1</h5>
+            <p class="card-text">Développement d'une application de gestion de rendez-vous pour un hôpital.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Projet 2 -->
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="card p-3">
+          <img src="IMAGE/SPORT.png" class="card-img-top rounded" alt="Gestion salle de sport">
+          <div class="card-body">
+            <h5 class="card-title">Projet 2</h5>
+            <p class="card-text">Développement d'une application complète de gestion de salle de sport.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Projet 3 -->
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card p-3">
+          <img src="IMAGE/PHARMACIE.png" class="card-img-top rounded" alt="Gestion pharmacie">
+          <div class="card-body">
+            <h5 class="card-title">Projet 3</h5>
+            <p class="card-text">Application de gestion de médicaments dans une pharmacie.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Projet 4 -->
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="card p-3">
+          <img src="IMAGE/CLINIQUE.png" class="card-img-top rounded" alt="Projet clinique">
+          <div class="card-body">
+            <h5 class="card-title">Projet 4</h5>
+            <p class="card-text">Application de gestion de clinique: rendez-vous, patients et dossiers médicaux.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Projet 5 -->
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="card p-3">
+          <img src="IMAGE/RESTAURANT.png" class="card-img-top rounded" alt="Projet restaurant">
+          <div class="card-body">
+            <h5 class="card-title">Projet 5</h5>
+            <p class="card-text">Application de gestion d'un restaurant: réservations, menu et commandes.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Projet 6 -->
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card p-3">
+          <img src="IMAGE/IMMO.png" class="card-img-top rounded" alt="Projet immobilier">
+          <div class="card-body">
+            <h5 class="card-title">Projet 6</h5>
+            <p class="card-text">Application de gestion immobilière: propriétés, locations et ventes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="container py-5 text-center" data-aos="fade-up">
+    <h2 class="glow mb-4">Mes Compétences</h2>
+    <div class="d-flex flex-wrap justify-content-center skills">
+      <div><i class="fab fa-html5 text-danger"></i><p>HTML</p></div>
+      <div><i class="fab fa-css3-alt text-primary"></i><p>CSS</p></div>
+      <div><i class="fab fa-js text-warning"></i><p>JavaScript</p></div>
+      <div><i class="fab fa-react text-info"></i><p>React</p></div>
+      <div><img src="https://upload.wikimedia.org/wikipedia/en/d/dd/MySQL_logo.svg" alt="MySQL" style="height:60px;"><p>MySQL</p></div>
+      <div><i class="fab fa-php text-secondary"></i><p>PHP</p></div>
+      <div><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI" style="height:60px;"><p>Power BI</p></div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container py-5 text-center" data-aos="fade-up">
+    <h2 class="glow mb-4">Contact</h2>
+    <form class="contact-form col-md-6 mx-auto mb-4" onsubmit="event.preventDefault(); window.open('https://wa.me/2250576608914?text=' + encodeURIComponent('Bonjour, je souhaite vous contacter.'));">
+      <input type="text" name="nom" class="form-control" placeholder="Nom" required>
+      <input type="email" name="email" class="form-control" placeholder="Email" required>
+      <textarea name="message" class="form-control" rows="4" placeholder="Message" required></textarea>
+      <button type="submit" class="btn btn-info w-100">Envoyer via WhatsApp</button>
+    </form>
+    <a href="https://wa.me/2250576608914" target="_blank" class="whatsapp-btn">
+      <i class="fab fa-whatsapp"></i> M'écrire sur WhatsApp
+    </a>
+  </section>
+
+  <!-- Floating WhatsApp -->
+  <div class="whatsapp-float">
+    <a href="https://wa.me/2250576608914" target="_blank" class="whatsapp-btn">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Bri Ariel Tsikenu - Développeur Web & Designer</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
+</html>
